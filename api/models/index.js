@@ -30,7 +30,7 @@ fs.readdirSync(__dirname)
   .forEach(file => {
     var model = sequelize["import"](path.join(__dirname, file))
     db[model.name] = model
-    //db[model.name].sync({ alter: true }) //this is additional syntax from Mas Haikal, bisa diganti {force: true} untuk membuat tabel baru dan menghapus tabel lama yg sudah ada
+    db[model.name].sync({ alter: true }) //this is additional syntax from Mas Haikal, bisa diganti {force: true} untuk membuat tabel baru dan menghapus tabel lama yg sudah ada
   })
 
 Object.keys(db).forEach(modelName => {
