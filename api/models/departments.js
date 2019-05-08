@@ -1,7 +1,7 @@
 const departments = (sequelize, DataTypes) => {
-  return sequelize.define("departments", {
+  let departments = sequelize.define("departments", {
     id_user: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.INTEGER(),
       allowNull: false
     },
     department_name: {
@@ -10,6 +10,15 @@ const departments = (sequelize, DataTypes) => {
       unique: true
     }
   })
+
+  departments.associate = models => {
+    models.departments.belongsTo(models.users, {
+      foreignKey: "id_user",
+      targetKey: "id"
+    })
+  }
+
+  return departments
 }
 
 module.exports = departments
