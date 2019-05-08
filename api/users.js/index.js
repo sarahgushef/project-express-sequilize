@@ -6,7 +6,23 @@ const jwt = require("jsonwebtoken")
 const controller = require("./controller")
 
 // Get All Data
-router.get("/", controller.getAllUsers)
+router.get(
+  "/",
+  (req, res, next) => {
+    // 1. Get token
+    const token =
+      req.headers.authorization && req.headers.authorization.split(" ")[1]
+
+    if (!token) {
+      return res.send("Token not found")
+    }
+
+    // 2. Verify token
+
+    next() // this syntax is for continue to the controller.getAllUsers, if we have token
+  },
+  controller.getAllUsers
+)
 
 // Insert one user
 router.post("/", controller.insertUser)
