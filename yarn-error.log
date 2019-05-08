@@ -1,0 +1,41 @@
+Arguments: 
+  /Users/sarahgushef/.nvm/versions/node/v11.14.0/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js add express mysql2 sequelize dotenve
+
+PATH: 
+  /Users/sarahgushef/.nvm/versions/node/v11.14.0/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/sarahgushef/.nvm/versions/node/v11.14.0/bin:/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/sarahgushef/Library/Android/sdk/tools:/Users/sarahgushef/Library/Android/sdk/tools/bin:/Users/sarahgushef/Library/Android/sdk/platform-tools:/Users/sarahgushef/Library/Android/sdk/tools:/Users/sarahgushef/Library/Android/sdk/tools/bin:/Users/sarahgushef/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  11.14.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/dotenve: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:66058:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:129541:22)
+      at Request.emit (events.js:193:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:130513:10)
+      at Request.emit (events.js:193:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:130435:12)
+      at Object.onceWrapper (events.js:281:20)
+      at IncomingMessage.emit (events.js:198:15)
+      at endReadableNT (_stream_readable.js:1139:12)
+      at processTicksAndRejections (internal/process/task_queues.js:81:17)
+
+npm manifest: 
+  {
+    "name": "project-sequilize-boilerplate",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
